@@ -5,7 +5,8 @@
     "target": "ES6",
     "baseUrl": "./src",
     "outDir": "./lib",
-    "moduleResolution": "Node"
+    "moduleResolution": "Node",
+    "declaration": true
   },
   "include": ["src", "vite.config.ts"],
   "exclude": ["node_modules", "lib"]

@@ -8,6 +8,7 @@
 
 function uploader() {
   // TODO
+  console.log('uploader');
 }
 
 export default uploader;
