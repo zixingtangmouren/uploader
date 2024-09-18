@@ -1,0 +1,19 @@
+{
+  "name": "@tangjs/uploader",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/react": "^18.3.7",
+    "axios": "^1.7.7",
+    "cookie_js": "^1.4.2",
+    "crypto-js": "^4.2.0",
+    "react": "^18.3.1"
+  }
+}
