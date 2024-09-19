@@ -1,12 +1,24 @@
-import React from 'react';
-import uploader from '@tangjs/uploader';
+import React, { useRef } from 'react';
+import { Sdk } from '@tangjs/uploader';
 import { useMount } from 'ahooks';
 
 function App() {
+  const sdkRef = useRef<Sdk>(new Sdk());
   useMount(() => {
-    uploader();
+    //
   });
-  return <div>App</div>;
+  return (
+    <div>
+      App
+      <button
+        onClick={() => {
+          sdkRef.current.upload();
+        }}
+      >
+        upload
+      </button>
+    </div>
+  );
 }
 
 export default App;

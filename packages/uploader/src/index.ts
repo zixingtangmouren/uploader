@@ -6,9 +6,4 @@
 // export * from './hooks/useUpload';
 // export * from './constants';
 
-function uploader() {
-  // TODO
-  console.log('uploader');
-}
-
-export default uploader;
+export * from './core/Sdk';

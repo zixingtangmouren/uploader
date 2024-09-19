@@ -12,4 +12,9 @@ export default [
   {
     ignores: ['node_modules', 'packages/*/node_modules', 'packages/*/lib'],
   },
+  {
+    rules: {
+      '@typescript-eslint/no-explicit-any': 'off',
+    },
+  },
 ];

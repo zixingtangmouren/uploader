@@ -5,14 +5,14 @@ interface FileListOptions {
 }
 
 export class FileList {
-  list: FileItem[] = [];
-  onChange: (fileList: FileItem[]) => void;
+  private list: FileItem[] = [];
+  private onChange: (fileList: FileItem[]) => void;
 
   constructor({ onChange }: FileListOptions) {
     this.onChange = onChange;
   }
 
-  transforms(files: File[]) {
+  public transforms(files: File[]) {
     return files.map(
       (file) =>
         new FileItem(file, () => {
@@ -21,21 +21,21 @@ export class FileList {
     );
   }
 
-  add(fileItems: FileItem[]) {
+  public add(fileItems: FileItem[]) {
     this.list.push(...fileItems);
     this.onChange(this.list);
   }
 
-  forEach(callback: (file: FileItem, index: number) => void) {
+  public forEach(callback: (file: FileItem, index: number) => void) {
     this.list.forEach(callback);
   }
 
-  clear() {
+  public clear() {
     this.list = [];
     this.onChange(this.list);
   }
 
-  remove(file: FileItem) {
+  public remove(file: FileItem) {
     const index = this.list.findIndex((item) => item.uid === file.uid);
     if (index !== -1) {
       this.list.splice(index, 1);

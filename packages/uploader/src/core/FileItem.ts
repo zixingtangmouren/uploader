@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { generateFileUid } from '../utils/generateFileUid';
 
 export class FileItem {
