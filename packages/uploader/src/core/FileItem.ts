@@ -1,5 +1,10 @@
 import { generateFileUid } from '../utils/generateFileUid';
 
+interface FileItemOptions {
+  file: File;
+  onStatusChange?: (status: string) => void;
+}
+
 export class FileItem {
   uid: string;
   name: string;
@@ -20,7 +25,7 @@ export class FileItem {
   thumbUrl?: string;
   crossOrigin?: string;
 
-  constructor(file: File, onStatusChange?: (status: string) => void) {
+  constructor({ file, onStatusChange }: FileItemOptions) {
     this.uid = generateFileUid(file);
     this.name = file.name;
     this.size = file.size;

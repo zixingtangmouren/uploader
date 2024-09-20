@@ -72,9 +72,8 @@ export class Sdk {
   }
 
   private run(files: File[]) {
-    console.log(files);
-    // 转成 FileItem
-    // 添加到 FileList
+    const fileItems = this.fileList.transforms(files);
+    this.fileList.add(fileItems);
     // 创建上传任务
     // 交给 Queue 进行调度
   }

@@ -15,8 +15,11 @@ export class FileList {
   public transforms(files: File[]) {
     return files.map(
       (file) =>
-        new FileItem(file, () => {
-          this.onChange(this.list);
+        new FileItem({
+          file,
+          onStatusChange: () => {
+            this.onChange(this.list);
+          },
         }),
     );
   }
